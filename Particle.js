@@ -5,6 +5,7 @@ class Particle{
         }
         this.body=Bodies.circle(x,y,this.radius,options);
         this.radius = 10;
+        this.length = length;
         World.add(world,this.body);
     }
     display(){

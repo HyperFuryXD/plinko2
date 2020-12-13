@@ -40,13 +40,24 @@ function draw() {
   division5.display();
   division6.display();
   division7.display();
-  plinkos.display();
+
  }
+ for(var j = 0;j<particles.length;j++){
+  particles[j].display();
+  }
 
- for(var j=40;j<=width;j=j+50){
+ for(var j=40;j<=this.width;j=j+50){
   plinkos.push(new Plinko(j,75));
+  plinkos[j].display();
 }
 
-for(var j=15;j<=width-10;j=j+50){
+for(var j=15;j<=this.width-10;j=j+50){
   plinkos.push(new Plinko(j,175))
+  plinkos[j].display();
 }
+
+if(frameCount%60===0){
+  particles.push(new Particle(random(width/2-10,width/2+10),10,10))
+}
+ 
+
